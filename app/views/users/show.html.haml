@@ -16,7 +16,7 @@
       looking for
     @LeWeb09?
   .wrapper
-    = simple_format auto_link(@user.purpose)
+    = simple_format(auto_link(h(@user.purpose)))
     
 #tags
   .title
