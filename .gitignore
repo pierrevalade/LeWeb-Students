@@ -1,0 +1,5 @@
+.DS_Store
+log/*
+log/*.pid
+tmp/**/*
+config/database.yml

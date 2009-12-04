@@ -1,0 +1,73 @@
+.wrapper
+  #info
+    %p
+      %span.big
+        Thanks
+      to #{link_to('@loic', 'http://twitter.com/loic')} and #{link_to('@geraldine', 'http://twitter.com/geraldine')}
+      #{link_to('great idea', 'http://twitter.com/loic/status/6083722426')}, #{link_to("LeWeb'09", 'http://leweb.net')} will gather of
+      %span.big
+        lot of students!
+    %p
+      We want to enable
+      %span.big
+        amazing networking
+      between students.
+      
+      
+  - if current_user
+    #steps
+      %ul
+        %li{:class => current_user.complete? ? 'completed' : nil}
+          1. #{link_to("Complete your profile and tags", edit_user_url(current_user))}
+        %li
+          2. See other students that are coming and start to network
+      
+  - else    
+    #steps.yui-gb
+      .yui-u.first
+        .number 1
+        .text
+          You are a student,
+          = login "add yourself in one click"
+      .yui-u
+        .number 2
+        .text
+          See other students that are coming and start to network
+      .yui-u
+        .number 3
+        .text
+          Come and join us @LeWeb'09 in Paris!
+    
+#users
+  .title
+    They will be there
+    %span.small
+      = link_to "full list", users_url
+  .wrapper
+    - @users.each do |user|
+      .user
+        = link_to image(user, :width => '50px'), user
+    .clear
+    
+#tags
+  .title
+    Find
+    %span.big
+      great
+    people to meet
+    %span.small
+      = link_to "all tags", tags_url
+  .wrapper
+    - tag_cloud @tags do |tag, css_class|
+      = link_to tag.name, tag, :class => css_class
+        
+#spread
+  .title
+    Help us
+    %span.big
+      spread
+    the word
+  .wrapper
+    LeWeb09 is only in a few days! Help us by sharing this app with 
+    <a name="fb_share" type="button_count" share_url="http://lewebstudents.com" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+    and #{image_tag('twitter-16.png')} #{link_to_twitter('followers!')}

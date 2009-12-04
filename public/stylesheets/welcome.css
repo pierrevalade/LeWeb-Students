@@ -1,0 +1,180 @@
+html {
+  background-image: url('/images/wave.png');
+  background-color: #ddeef6;
+  background-repeat: no-repeat;
+  background-position: top center; }
+
+a {
+  color: #3198D3; }
+
+span.big, a.big {
+  color: #3B5998;
+  font-weight: bold; }
+
+span.small, span.small a {
+  font-size: 93%;
+  font-weight: bold; }
+
+.clear {
+  clear: both; }
+
+body {
+  margin: 20px 0;
+  font-family: Lucida Grande, Verdana, Arial; }
+  body #doc #hd {
+    border: 1px solid #BFD8EA;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    background-color: #BFD8EA; }
+    body #doc #hd .wrapper {
+      padding: 10px; }
+      body #doc #hd .wrapper #logo a {
+        color: #203360;
+        text-decoration: none;
+        font-size: 200%; }
+      body #doc #hd .wrapper #twitter-login, body #doc #hd .wrapper #add-yourself {
+        float: right;
+        margin-top: 4px; }
+      body #doc #hd .wrapper #add-yourself {
+        margin-right: 10px;
+        margin-top: 7px; }
+        body #doc #hd .wrapper #add-yourself a {
+          color: #0068A4; }
+      body #doc #hd .wrapper #nav {
+        float: right;
+        margin: 5px 5px 0 0; }
+        body #doc #hd .wrapper #nav li {
+          font-size: 120%;
+          display: block;
+          margin-left: 10px;
+          float: left; }
+  body #doc #bd {
+    background-color: white;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    min-height: 400px; }
+    body #doc #bd .wrapper {
+      padding: 10px 15px; }
+    body #doc #bd .title {
+      font-size: 110%;
+      background-color: #E2F2FB;
+      border: solid #DDEEF6;
+      border-width: 1px 0 1px 0;
+      padding: 8px 10px; }
+  body #doc #ft {
+    text-align: center;
+    font-size: 93%; }
+    body #doc #ft .text {
+      margin: 10px;
+      color: #697F8F; }
+    body #doc #ft p {
+      margin-top: 4px; }
+
+.tag1 {
+  font-size: 100%; }
+
+.tag2 {
+  font-size: 131%; }
+
+.tag3 {
+  font-size: 146.5%; }
+
+.tag4 {
+  font-size: 167%; }
+
+.tag5 {
+  font-size: 197%; }
+
+.welcome.index #info {
+  font-size: 120%; }
+  .welcome.index #info p {
+    padding: 5px 0; }
+.welcome.index #steps {
+  margin-top: 10px; }
+  .welcome.index #steps ul {
+    margin: 5px 0;
+    padding: 10px;
+    border: 3px solid #eee; }
+  .welcome.index #steps li {
+    font-size: 120%;
+    margin: 3px 0; }
+  .welcome.index #steps li.completed {
+    text-decoration: line-through; }
+  .welcome.index #steps .number {
+    font-size: 200%;
+    float: left;
+    color: #707D89; }
+  .welcome.index #steps .text {
+    margin-left: 25px;
+    font-size: 110%; }
+.welcome.index #users {
+  margin-top: 10px; }
+  .welcome.index #users .user {
+    float: left;
+    border: 1px solid #eee;
+    padding: 3px;
+    margin-left: 6px; }
+
+.users.show #profile .image {
+  float: left;
+  border: 1px solid #eee;
+  padding: 3px; }
+.users.show #profile .name {
+  margin-left: 70px;
+  font-size: 160%; }
+.users.show #profile .nickname {
+  margin-top: 2px;
+  margin-left: 70px;
+  font-size: 100%; }
+.users.show #purpose p {
+  margin-bottom: 10px; }
+.users.show #network .twitter-logo {
+  float: left; }
+.users.show #network .twitter-link {
+  margin-top: 2px;
+  margin-left: 100px; }
+
+.tags.show #tag .name {
+  font-size: 160%; }
+
+.tags.show #count, .users.index #count {
+  font-size: 160%; }
+.tags.show #users .user, .users.index #users .user {
+  margin-bottom: 15px; }
+  .tags.show #users .user .image, .users.index #users .user .image {
+    float: left;
+    border: 1px solid #eee;
+    padding: 3px; }
+  .tags.show #users .user .text, .users.index #users .user .text {
+    margin-left: 70px; }
+    .tags.show #users .user .text .name, .users.index #users .user .text .name {
+      font-size: 130%; }
+    .tags.show #users .user .text .tags, .users.index #users .user .text .tags {
+      margin-top: 5px; }
+    .tags.show #users .user .text .purpose, .users.index #users .user .text .purpose {
+      margin-top: 5px; }
+
+.tags.index #count {
+  font-size: 160%; }
+.tags.index .tag {
+  clear: both;
+  margin-bottom: 10px; }
+  .tags.index .tag .count {
+    float: left;
+    font-size: 160%;
+    color: #697F8F;
+    font-weight: bold; }
+  .tags.index .tag .name {
+    margin-left: 40px;
+    font-size: 140%; }
+
+.users.edit #title {
+  font-size: 160%; }
+.users.edit textarea {
+  width: 100%;
+  height: 150px; }
+.users.edit #tags li {
+  margin: 5px 0; }
+.users.edit #twitter .preview {
+  margin-top: 10px;
+  font-size: 90%; }

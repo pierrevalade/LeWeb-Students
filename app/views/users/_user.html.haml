@@ -1,0 +1,10 @@
+.user
+  .image
+    = link_to image(user, :width => '50px'), user
+  .text
+    .name
+      = link_to user.name, user
+    .tags
+      = tags(user)
+    .purpose
+      = truncate user.purpose, :length => 140

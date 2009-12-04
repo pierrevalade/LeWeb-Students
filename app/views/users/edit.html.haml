@@ -1,0 +1,42 @@
+.wrapper
+  #title
+    Edit your profile
+    
+- form_for @user do |form|
+    
+  #purpose
+    .title
+      What are you
+      %span.big
+        looking for
+      @LeWeb09?
+    .wrapper
+      = form.text_area :purpose
+      
+  #tags
+    .title
+      #{@user.name}'s
+      %span.big
+        tags
+    .wrapper
+      %ul
+        - 5.times do |i|
+          %li
+            = label_tag '', i+1
+            = text_field_tag 'user[tags_array][]', @user.get_tag_list('tag')[i]
+  
+  - unless @user.twitter_status            
+    #twitter
+      .title
+        Tell it on
+        %span.big
+          Twitter
+      .wrapper
+        = check_box_tag 'twitter', 1, true
+        = label_tag 'twitter', 'Update my Twitter status'
+        .preview
+          %p Preview:
+          %p "I've just register on http://lewebstudents.com. Start networking for #leweb ! #lewebstudent"
+  
+  .title
+    = form.submit 'Save my profile'

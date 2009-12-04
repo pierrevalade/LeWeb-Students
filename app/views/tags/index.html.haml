@@ -1,0 +1,17 @@
+.wrapper
+  #count
+    #{Tag.count} tags
+      
+#users
+  .title
+    Full
+    %span.big
+      list
+      
+  .wrapper
+    - @tags.each do |tag|
+      .tag
+        .count
+          = tag.users_count
+        .name
+          = link_to tag.name, tag

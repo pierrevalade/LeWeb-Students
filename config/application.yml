@@ -1,0 +1,4 @@
+development:
+    <<: *defaults
+    twitter_consumer_key: AeR2ASU9NecltpQRmMAYA
+    twitter_consumer_secret: 8hIOyCiZW2h66yNBB4pFWaxW56kzcGhDxnZx9azU

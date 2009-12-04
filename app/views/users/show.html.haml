@@ -1,0 +1,78 @@
+.wrapper
+  #profile
+    .image
+      = image(@user, :width => '50')
+    .name
+      = @user.name
+      - if current_user == @user
+        = link_to "Edit", edit_user_url(@user)
+    .nickname
+      = link_to @user.nickname, @user.twitter_url, :target => '_blank'
+    .clear
+#purpose
+  .title
+    What are you
+    %span.big
+      looking for
+    @LeWeb09?
+  .wrapper
+    = simple_format auto_link(@user.purpose)
+    
+#tags
+  .title
+    #{@user.name}'s
+    %span.big
+      tags
+  .wrapper
+    = tags(@user)
+    
+#network
+  .title
+    Start
+    %span.big
+      networking
+  .wrapper
+    .twitter-logo
+      = link_to image_tag('twitter.gif'), @user.twitter_contact_url, :target => '_blank'
+    .twitter-link
+      = link_to "Contact using Twitter", @user.twitter_contact_url, :target => '_blank'
+      
+      
+#twitter
+  .title
+    #{@user.name}'s
+    %span.big
+      tweets
+  #tweets
+    :plain
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 5,
+        interval: 6000,
+        width: 'auto',
+        height: 300,
+        theme: {
+          shell: {
+            background: '#ffffff',
+            color: '#000000'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#000000',
+            links: '#357a17'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          hashtags: true,
+          timestamp: true,
+          avatars: false,
+          behavior: 'all'
+        }
+      }).render().setUser('#{@user.nickname}').start();
+      </script>

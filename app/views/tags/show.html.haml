@@ -1,0 +1,17 @@
+.wrapper
+  #tag
+    .name
+      = link_to "Tags", tags_url
+      > 
+      = @tag.name
+      
+#users
+  .title
+    %span.big
+      #{@tag.users_count}
+    users
+    %span.big
+      tagged
+    under #{@tag.name}
+  .wrapper
+    = render @users
