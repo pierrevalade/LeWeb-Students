@@ -36,59 +36,59 @@
             <a href="http://www.twitter.com/lewebstudents"><img src="http://twitter-badges.s3.amazonaws.com/follow_us-a.png" alt="Follow us on Twitter"/></a>
           %p
             Let's meet: We are #{link_to('Pierre', user_url('pierrevalade'))}, #{link_to('Romain', user_url('romain_david'))} and #{link_to('Andrei', user_url('andreibuzinskas'))}
-            
-      :plain
-            <script type="text/javascript">
-            var uservoiceOptions = {
-              /* required */
-              key: 'lewebstudents',
-              host: 'lewebstudents.uservoice.com', 
-              forum: '35393',
-              showTab: true,  
-              /* optional */
-              alignment: 'left',
-              background_color:'#000', 
-              text_color: 'white',
-              hover_color: '#3B5998',
-              lang: 'en'
-            };
+          
+    :plain
+          <script type="text/javascript">
+          var uservoiceOptions = {
+            /* required */
+            key: 'lewebstudents',
+            host: 'lewebstudents.uservoice.com', 
+            forum: '35393',
+            showTab: true,  
+            /* optional */
+            alignment: 'left',
+            background_color:'#000', 
+            text_color: 'white',
+            hover_color: '#3B5998',
+            lang: 'en'
+          };
 
-            function _loadUserVoice() {
-              var s = document.createElement('script');
-              s.setAttribute('type', 'text/javascript');
-              s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
-              document.getElementsByTagName('head')[0].appendChild(s);
+          function _loadUserVoice() {
+            var s = document.createElement('script');
+            s.setAttribute('type', 'text/javascript');
+            s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
+            document.getElementsByTagName('head')[0].appendChild(s);
+          }
+          _loadSuper = window.onload;
+          window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+          </script>
+          
+          <script type="text/javascript">
+          var _sf_async_config={uid:2884,domain:"thewebstudents.com"};
+          (function(){
+            function loadChartbeat() {
+              window._sf_endpt=(new Date()).getTime();
+              var e = document.createElement('script');
+              e.setAttribute('language', 'javascript');
+              e.setAttribute('type', 'text/javascript');
+              e.setAttribute('src',
+                 (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+                 "static.chartbeat.com/js/chartbeat.js");
+              document.body.appendChild(e);
             }
-            _loadSuper = window.onload;
-            window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
-            </script>
-            
-            <script type="text/javascript">
-            var _sf_async_config={uid:2884,domain:"thewebstudents.com"};
-            (function(){
-              function loadChartbeat() {
-                window._sf_endpt=(new Date()).getTime();
-                var e = document.createElement('script');
-                e.setAttribute('language', 'javascript');
-                e.setAttribute('type', 'text/javascript');
-                e.setAttribute('src',
-                   (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
-                   "static.chartbeat.com/js/chartbeat.js");
-                document.body.appendChild(e);
-              }
-              var oldonload = window.onload;
-              window.onload = (typeof window.onload != 'function') ?
-                 loadChartbeat : function() { oldonload(); loadChartbeat(); };
-            })();
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+               loadChartbeat : function() { oldonload(); loadChartbeat(); };
+          })();
 
-            </script>
-            
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-            <script type="text/javascript">
-            try {
-            var pageTracker = _gat._getTracker("UA-11919584-1");
-            pageTracker._trackPageview();
-            } catch(err) {}</script>
+          </script>
+          
+          <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+          try {
+          var pageTracker = _gat._getTracker("UA-11919584-1");
+          pageTracker._trackPageview();
+          } catch(err) {}</script>
