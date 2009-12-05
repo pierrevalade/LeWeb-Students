@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       
       if params[:twitter] && !@user.twitter_status
         # post status to twitter
-        status = "I've just register on http://lewebstudents.com. Start networking for #leweb ! #lewebstudents"
+        status = "I've just registered on http://lewebstudents.com. Start networking for #leweb ! #lewebstudents"
         response = @user.access_token.post('/statuses/update.json', { :status => status })
         @user.update_attribute(:twitter_status, true)
       end
