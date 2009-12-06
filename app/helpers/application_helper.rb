@@ -22,7 +22,7 @@ module ApplicationHelper
   end
   
   def image(user, options = {})
-    image_tag user.avatar_url, options
+    image_tag "http://purl.org/net/spiurl/#{user.nickname}", options
   end
   
   def tags(user)
