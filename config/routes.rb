@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :users
+  map.resources :users, :collection => {:replies => :get}
   map.resource :user_session, :member => {:twitter => :get}
   
   map.resources :tags

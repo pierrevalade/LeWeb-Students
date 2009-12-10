@@ -1,0 +1,5 @@
+- @users.in_groups_of(5, false).each do |group|
+  %p
+    - group.each do |user|
+      = "@#{user.nickname}"
+    RDV at 6pm30 for the #lewebstudents photo! On the main stage! #leweb
